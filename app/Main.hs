@@ -1,6 +1,13 @@
 module Main where
 
 import Lib
+import System.Environment
 
 main :: IO ()
-main = putStrLn =<< password ' ' 16
+main = do
+  args <- getArgs
+  putStrLn =<< flip password 16 (case args of
+                                  ["alpha"] -> 'a'
+                                  ["num"] -> 'n'
+                                  ["symbol"] -> 's'
+                                  _ -> ' ')
