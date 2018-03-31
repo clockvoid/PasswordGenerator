@@ -1,4 +1,4 @@
-module Lib
+module Password
   ( password
   ) where
 
@@ -22,7 +22,7 @@ randNum = randomRIO ('0', '9') :: IO Char
 randSymbol :: IO Char
 randSymbol = randomRIO ('!', '@') :: IO Char
 
-password :: Char -> Int -> IO [Char]
+password :: Char -> Int -> IO String
 password m n = replicateM n rc
   where
   rc = case m of

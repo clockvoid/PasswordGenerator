@@ -1,6 +1,6 @@
 module Main where
 
-import Lib
+import Password
 import System.Environment
 
 main :: IO ()
