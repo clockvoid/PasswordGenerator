@@ -9,7 +9,7 @@ Haskellで作られたパスワードジェネレータです．文字数を指�
 文字種選択モードも搭載しており，Char型の一文字を渡すことによって指定することが可能です．`a`を渡すとアルファベット，`n`を渡すと数字，`s`を渡すと記号のみでパスワードを生成してくれます．
 
 ## Intallation
-```
+```bash
 git clone https://clockvoid/PasswordGenerator
 cd PasswordGenerator
 stack build
